@@ -1,4 +1,5 @@
 import {Hono, type Context} from 'hono';
+// import {KV} from 'cloudflare';
 import type {FC} from 'hono/jsx';
 import {z} from 'zod';
 import {zValidator} from '@hono/zod-validator';
@@ -44,7 +45,11 @@ const Layout: FC = props => {
 
 // This returns JSX for a page that
 // list the dogs passed in a prop.
-const DogPage: FC = ({dogs}) => {
+const DogPage: FC = async ({dogs}) => {
+  // await KV.put('number', 19);
+  // const number = await KV.get('number');
+  // console.log('dog-router.tsx DogPage: number =', number);
+
   const title = 'Dogs I Know';
   return (
     <Layout title={title}>
