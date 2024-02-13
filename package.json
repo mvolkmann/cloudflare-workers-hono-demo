@@ -1,19 +1,20 @@
 {
-	"name": "hono-dogs",
-	"version": "0.0.0",
-	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
-		"format": "prettier --write '{public,src}/**/*.{astro,css,html,js,ts}'",
-		"start": "wrangler dev"
-	},
-	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20231218.0",
-		"typescript": "^5.0.4",
-		"wrangler": "^3.0.0"
-	},
-	"dependencies": {
-		"@hono/zod-validator": "^0.1.11",
-		"hono": "^3.12.3"
-	}
+  "name": "hono-dogs",
+  "version": "0.0.0",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "format": "prettier --write '{public,src}/**/*.{astro,css,html,js,ts}'",
+    "reinstall": "rm -rf node_modules bun.lockb && bun install",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.1.11",
+    "hono": "^3.12.3"
+  }
 }
